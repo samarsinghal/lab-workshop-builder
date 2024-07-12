@@ -1,0 +1,38 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: lab-workshop-builder
+spec:
+  title: "Workshop"
+  description: "Workshop description."
+  publish:
+    image: $(image_repository)/lab-workshop-builder-files:$(workshop_version)  
+  workshop:
+    image: docker.io/samarsinghal/lab-workshop-builder:latest
+    files:
+    - git:
+        url: https://github.com/vmware-tanzu-labs/lab-markdown-sample
+        ref: origin/main
+    # - image:
+    #     url: $(image_repository)/lab-workshop-builder-files:$(workshop_version)
+      includePaths:
+      - /workshop/**
+      - /exercises/**
+      - /README.md
+  session:
+    namespaces:
+      budget: medium
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      editor:
+        enabled: true
+      console:
+        enabled: false
+      docker:
+        enabled: true
+      registry:
+        enabled: true
+      vcluster:
+        enabled: true

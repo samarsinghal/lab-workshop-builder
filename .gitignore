@@ -1,0 +1,15 @@
+.cache
+.config
+.docker
+.bash_history
+.gitconfig
+.kube
+.lesshst
+.local
+.ssh
+.theia
+.webdav
+.yarn
+*.swp
+./exercises/frontend-src/static
+./exercises/set_env_vars.sh

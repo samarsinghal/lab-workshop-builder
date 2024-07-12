@@ -1,0 +1,34 @@
+pathways:
+  default: workshop
+
+  paths:
+    workshop:
+      title: "Workshop"
+
+      steps:
+      - 00-workshop-overview
+      - 01-workshop-create
+      - 02-workshop-image
+      - 99-workshop-summary
+
+      # params:
+      # - name: NAME
+      #   value: undefined
+      #   aliases:
+      #   - ALIAS
+
+modules:
+- name: 00-workshop-overview
+  title: Workshop Overview
+- name: 01-workshop-create
+  title: Workshop Create
+- name: 02-workshop-image
+  title: Workshop Image
+- name: 99-workshop-summary
+  title: Workshop Summary
+
+# params:
+# - name: NAME
+#   value: undefined
+#   aliases:
+#   - ALIAS
