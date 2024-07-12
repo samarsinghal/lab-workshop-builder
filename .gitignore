@@ -11,5 +11,5 @@
 .webdav
 .yarn
 *.swp
-./exercises/frontend-src/static
-./exercises/set_env_vars.sh
+./project/frontend-src/static
+project/set_env_vars.sh

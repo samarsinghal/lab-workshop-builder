@@ -2,7 +2,7 @@
 # image which incorporates additional application binaries or tools. Select
 # the appropriate Educates workshop base image in the `FROM` line.
 
-FROM ghcr.io/vmware-tanzu-labs/educates-base-environment:2.6
+FROM ghcr.io/vmware-tanzu-labs/educates-base-environment:develop
 
 # Include here any steps to build your custom workshop base image. See the
 # documentation on best practices for building a custom workshop base image.

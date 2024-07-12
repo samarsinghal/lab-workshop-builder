@@ -11,13 +11,13 @@ spec:
     image: docker.io/samarsinghal/lab-workshop-builder:latest
     files:
     - git:
-        url: https://github.com/vmware-tanzu-labs/lab-markdown-sample
-        ref: origin/main
-    # - image:
-    #     url: $(image_repository)/lab-workshop-builder-files:$(workshop_version)
+        # url: https://github.com/samarsinghal/lab-workshop-builder
+        # ref: origin/main
+        image:
+          url: $(image_repository)/lab-workshop-builder-files:$(workshop_version)
       includePaths:
       - /workshop/**
-      - /exercises/**
+      - /project/**
       - /README.md
   session:
     namespaces:
