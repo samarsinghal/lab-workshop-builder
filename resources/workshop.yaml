@@ -36,3 +36,6 @@ spec:
         enabled: true
       vcluster:
         enabled: true
+    env:
+    - name: NEW_WORKSHOP_NAME
+      value: test-lab

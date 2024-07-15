@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cp -u project/Dockerfile $WORKSHOP_NAME/Dockerfile
+# cp -u ~/project/Dockerfile ~/exercises/$NEW_WORKSHOP_NAME/Dockerfile
 
 # Create the Docker config.json
 DOCKER_CONFIG_JSON=$(jq -n --arg url "https://$REGISTRY_URL/v1/" --arg username "$REGISTRY_USERNAME" --arg password "$REGISTRY_PASSWORD" '{
@@ -17,18 +17,18 @@ echo "$DOCKER_CONFIG_JSON" > docker-config.json
 
 # Create the Kubernetes Secret
 kubectl delete secret kaniko-secret --ignore-not-found
-kubectl create secret generic kaniko-secret --from-file=.dockerconfigjson=docker-config.json --type=kubernetes.io/dockerconfigjson
+kubectl create secret generic kaniko-secret --from-literal=.dockerconfigjson="$DOCKER_CONFIG_JSON" --type=kubernetes.io/dockerconfigjson
 
 # Create a ConfigMap from the Dockerfile
 kubectl delete configmap kaniko-config --ignore-not-found
-kubectl create configmap kaniko-config --from-file=Dockerfile=$WORKSHOP_NAME/Dockerfile
+kubectl create configmap kaniko-config --from-file=Dockerfile=/home/eduk8s/exercises/$NEW_WORKSHOP_NAME/Dockerfile
 
 # Replace placeholders in the template and generate the final YAML file
-envsubst < project/kaniko-pod.yaml.template > $WORKSHOP_NAME/kaniko-pod.yaml
+envsubst < ~/project/kaniko-pod.yaml.template > ~/project/kaniko-pod.yaml
 
 # Apply the Kaniko Pod
 kubectl delete pod kaniko --ignore-not-found
-kubectl apply -f $WORKSHOP_NAME/kaniko-pod.yaml
+kubectl apply -f ~/project/kaniko-pod.yaml
 
 # Wait for the Kaniko Pod to complete
 # kubectl wait --for=condition=complete pod/kaniko --timeout=600s

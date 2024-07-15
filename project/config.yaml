@@ -1,0 +1,46 @@
+pathways:
+  default: workshop
+
+  paths:
+    workshop:
+      title: "Workshop Builder"
+
+      steps:
+      - 00-workshop-overview
+      - 01-workshop-builder
+      - 02-image-builder
+      - 03-content-builder
+      - 04-content-tester
+      - 05-templete-connect-cluster
+      - 06-workshop-manage
+      - 07-workshop-deploy
+      - 99-summary
+
+      params:
+      - name: NEW_WORKSHOP_NAME
+        value: undefined
+
+
+modules:
+- name: 00-workshop-overview
+  title: Workshop Overview
+- name: 01-workshop-builder
+  title: Initiate Workshop
+- name: 02-image-builder
+  title: Workshop Custom Image Builder
+- name: 03-content-builder
+  title: Workshop Content Builder
+- name: 04-content-tester
+  title: Workshop Content Tester
+- name: 05-templete-connect-cluster
+  title: Connect Externel Cluster
+- name: 06-workshop-manage
+  title: Manage Workshop
+- name: 07-workshop-deploy
+  title: Deploy Workshop
+- name: 99-summary
+  title: Summary
+
+params:
+- name: NEW_WORKSHOP_NAME
+  value: undefined

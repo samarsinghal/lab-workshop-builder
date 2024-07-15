@@ -6,8 +6,8 @@ This is the first page of the workshop instructions, create as many separate pag
 
 sh build_image.sh
 
-kubectl run $WORKSHOP_NAME --image=$REGISTRY_URL/$REGISTRY_USERNAME/$WORKSHOP_NAME:$WORKSHOP_VERSION --restart=Never
+kubectl run $NEW_WORKSHOP_NAME --image=$REGISTRY_URL/$REGISTRY_USERNAME/$NEW_WORKSHOP_NAME:$WORKSHOP_VERSION --restart=Never
 
-kubectl get po $WORKSHOP_NAME
+kubectl get po $NEW_WORKSHOP_NAME
 
-kubectl exec -it $WORKSHOP_NAME -- /bin/bash
+kubectl exec -it $NEW_WORKSHOP_NAME -- /bin/bash

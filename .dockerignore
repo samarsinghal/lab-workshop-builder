@@ -5,3 +5,5 @@
 Dockerfile
 Makefile
 resources
+workshop_deploy.sh
+

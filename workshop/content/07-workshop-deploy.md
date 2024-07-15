@@ -12,3 +12,7 @@ educates deploy-workshop --overtime=30m  --overdue=20m --reserved=1 --initial=1
 
 
 educates browse-workshops
+
+
+Push all the workshop changes
+

@@ -1,0 +1,26 @@
+modules:
+  00-workshop-overview:
+    name: Workshop Overview
+    exit_sign: Start Workshop
+  01-workshop-builder:
+    name: Initiate Workshop
+  02-image-builder:
+    name: Workshop Custom Image Builder
+  03-content-builder:
+    name: Workshop Content Builder
+  04-content-tester:
+    name: Workshop Content Tester
+  05-templete-connect-cluster:
+    name: Connect Externel Cluster
+  06-workshop-manage:
+    name: Manage Workshop
+  07-workshop-deploy:
+    name: Deploy Workshop
+  99-summary:
+    name: Workshop Summary
+    exit_sign: Finish Workshop
+
+config:
+    vars:
+    - name: NEW_WORKSHOP_NAME
+      value: test-lab

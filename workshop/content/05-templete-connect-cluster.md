@@ -18,8 +18,8 @@ Test build workshop image for all the required tools and CLI on terminal 2
 
 ```execute-2
 source ~/project/set_env_vars.sh
-kubectl run $WORKSHOP_NAME --image=$REGISTRY_URL/$REGISTRY_USERNAME/$WORKSHOP_NAME:$WORKSHOP_VERSION --restart=Never
-kubectl get po $WORKSHOP_NAME
-kubectl exec -it $WORKSHOP_NAME -- /bin/bash
+kubectl run $NEW_WORKSHOP_NAME --image=$REGISTRY_URL/$REGISTRY_USERNAME/$NEW_WORKSHOP_NAME:$WORKSHOP_VERSION --restart=Never
+kubectl get po $NEW_WORKSHOP_NAME
+kubectl exec -it $NEW_WORKSHOP_NAME -- /bin/bash
 clear
 ```
