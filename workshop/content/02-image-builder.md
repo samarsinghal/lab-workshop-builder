@@ -11,6 +11,12 @@ In order to provide a robust and ready-to-use environment for the participants i
     sh ~/project/create_image.sh
     ```
 
+    Open Image file in editor
+
+    ```editor:open-file
+    file: ~/exercises/{{ ENV_NEW_WORKSHOP_NAME }}/Dockerfile
+    ```
+
 2. **Choose base image:**
 
     JDK 8
@@ -64,10 +70,15 @@ In order to provide a robust and ready-to-use environment for the participants i
 6. **Test build workshop image for all the required tools and CLI on terminal 2:**
 
     ```execute-2
-    source ~/project/set_env_vars.sh
     kubectl run $NEW_WORKSHOP_NAME --image=$REGISTRY_URL/$REGISTRY_USERNAME/$NEW_WORKSHOP_NAME:$WORKSHOP_VERSION --restart=Never
     kubectl wait --for=condition=Ready pod/$NEW_WORKSHOP_NAME --timeout=300s
     kubectl get po $NEW_WORKSHOP_NAME
     kubectl exec -it $NEW_WORKSHOP_NAME -- /bin/bash
     clear
+    ```
+    
+7. **Exit Image:**
+
+    ```execute-2
+    exit
     ```

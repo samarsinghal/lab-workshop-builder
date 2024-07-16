@@ -1,21 +1,10 @@
 #!/bin/bash
 
-# # Fail the script on any error.
-# set -e
-
-# # Variables (ensure these are passed as environment variables).
-# REPO_NAME=${REPO_NAME}
-# COMMIT_MESSAGE=${COMMIT_MESSAGE}
-# BRANCH_NAME=${BRANCH_NAME}
-# USERNAME=${USERNAME}
-# EMAIL=${EMAIL}
-# ACCESS_TOKEN=${ACCESS_TOKEN}
-
-# # Check if all required environment variables are set.
-# if [ -z "$REPO_NAME" ] || [ -z "$COMMIT_MESSAGE" ] || [ -z "$BRANCH_NAME" ] || [ -z "$USERNAME" ] || [ -z "$EMAIL" ] || [ -z "$ACCESS_TOKEN" ]; then
-#   echo "One or more required environment variables are missing."
-#   exit 1
-# fi
+# Check if all required environment variables are set.
+if [ -z "$REPO_NAME" ] || [ -z "$COMMIT_MESSAGE" ] || [ -z "$BRANCH_NAME" ] || [ -z "$USERNAME" ] || [ -z "$EMAIL" ] || [ -z "$ACCESS_TOKEN" ]; then
+  echo "One or more required environment variables are missing."
+  exit 1
+fi
 
 # Function to create a new repository.
 create_repository() {

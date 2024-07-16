@@ -35,7 +35,7 @@ spec:
       registry:
         enabled: true
       vcluster:
-        enabled: true
+        enabled: false
     env:
     - name: NEW_WORKSHOP_NAME
       value: test-lab

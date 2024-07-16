@@ -8,6 +8,10 @@ modules:
     name: Workshop Custom Image Builder
   03-content-builder:
     name: Workshop Content Builder
+  # labs/testcase:
+  #     name: Test Case
+  # labs/setup:
+  #     name: Setup    
   04-content-tester:
     name: Workshop Content Tester
   05-templete-connect-cluster:

@@ -24,11 +24,11 @@ kubectl delete configmap kaniko-config --ignore-not-found
 kubectl create configmap kaniko-config --from-file=Dockerfile=/home/eduk8s/exercises/$NEW_WORKSHOP_NAME/Dockerfile
 
 # Replace placeholders in the template and generate the final YAML file
-envsubst < ~/project/kaniko-pod.yaml.template > ~/project/kaniko-pod.yaml
+envsubst < ~/project/kaniko_pod.yaml.template > ~/project/kaniko_pod.yaml
 
 # Apply the Kaniko Pod
 kubectl delete pod kaniko --ignore-not-found
-kubectl apply -f ~/project/kaniko-pod.yaml
+kubectl apply -f ~/project/kaniko_pod.yaml
 
 # Wait for the Kaniko Pod to complete
 # kubectl wait --for=condition=complete pod/kaniko --timeout=600s
