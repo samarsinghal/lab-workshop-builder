@@ -8,6 +8,10 @@ Ensure that your deployment configuration is correctly defined by opening the en
 file: ~/project/set_env_vars.sh
 ```
 
+```execute-all
+source ~/project/set_env_vars.sh
+```
+
 ## 2. Commit and Push Changes
 
 Make sure all changes in your workshop are committed and pushed to the repository. This ensures that your deployment uses the latest version of your workshop.
@@ -40,6 +44,6 @@ sh ~/project/deploy_workshop.sh
 Once the workshop is deployed, you can browse it using the following command:
 
 ```execute-1
-educates browse-workshops --kubeconfig=$HOME/uploads/kubeconfig
+educates browse-workshops --kubeconfig=$HOME/uploads/kubeconfig --portal=$TARGET_PORTAL
 ```
 
