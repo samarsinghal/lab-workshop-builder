@@ -6,13 +6,9 @@ modules:
     - 01-workshop-builder
     - 02-image-builder
     - 03-content-builder
-    # - labs/setup
-    # - labs/testcase
     - 04-content-tester
-    - 05-templete-connect-cluster
-    - 06-workshop-manage
-    - 07-workshop-deploy
-    - 99-summary
+    - 05-workshop-deployer
+    - 99-workshop-summary
 
 
 

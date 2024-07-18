@@ -3,8 +3,8 @@ kind: Workshop
 metadata:
   name: lab-workshop-builder
 spec:
-  title: "Workshop"
-  description: "Workshop description."
+  title: "Workshop Builder"
+  description: "A workshop to build workshop"
   publish:
     image: $(image_repository)/lab-workshop-builder-files:$(workshop_version)  
   workshop:
@@ -35,7 +35,9 @@ spec:
       registry:
         enabled: true
       vcluster:
-        enabled: false
+        enabled: true
+      uploads:
+        enabled: true  
     env:
     - name: NEW_WORKSHOP_NAME
       value: test-lab

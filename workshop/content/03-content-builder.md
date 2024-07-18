@@ -1,4 +1,4 @@
-# Create workshop content 
+
 
 This guide will assist you in defining your own set of workshop instructions. For detailed guidance, refer to the eduk8s documentation, which lists all the possible options you can include in your content. As part of this workshop content creation exercise, we will focus on one content file at a time. You can easily navigate back and forth on content creater to create, update, re-arrange, and test content as needed.
 
@@ -20,17 +20,17 @@ sh ~/project/rearrange_content.sh
 This action will load the desired content as next chapter
 
 ```execute
-sh ~/project/deploy_content.sh
+source ~/project/deploy_content.sh
 ```
 
-## Content Refresh 
+## Refresh content
 This action will refresh the test content
 
 ```execute-1
 sh ~/project/refresh_content.sh
 ```
 
-## Configure the terminals to use the new workshop image.
+## Set workshop image on terminals
 This action will run the workshop image on both terminal instance
 
 ```execute-all

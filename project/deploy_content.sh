@@ -32,7 +32,7 @@ export selected_file=${files[$file_index]}
 
 cp -ur ~/exercises/$NEW_WORKSHOP_NAME/workshop/content /opt/workshop/content/
 rm /opt/workshop/content/04-content-tester.md
-cp ~/exercises/$NEW_WORKSHOP_NAME/workshop/content/$selected_file /opt/workshop/content/labs/04-content-tester.md
+cp ~/exercises/$NEW_WORKSHOP_NAME/workshop/content/$selected_file /opt/workshop/content/04-content-tester.md
 
 # rm /opt/workshop/content/labs/testcase.md
 # rm /opt/workshop/content/labs/testcase.md.in

@@ -1,4 +1,6 @@
 
+Workshop builder activity will let you define the necessary workshop configuration to build a new workshop or load an existing workshop
+
 ## Set required environment variables for the workshop 
 
 Open set_env_vars.sh script file to set environment variables. Details on environment variables-
@@ -25,8 +27,5 @@ Run the below script to create the workshop. The `create_workshop.sh` script aut
 sh ~/project/create_workshop.sh
 ```
 
-## Now explore the build workshop 
+## Now explore the build/cloned workshop in Editor
 
-```editor:open-file
-file: ~/exercises/{{ ENV_NEW_WORKSHOP_NAME }}/resources/workshop.yaml
-```

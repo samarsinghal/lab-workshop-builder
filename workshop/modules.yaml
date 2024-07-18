@@ -8,19 +8,11 @@ modules:
     name: Workshop Custom Image Builder
   03-content-builder:
     name: Workshop Content Builder
-  # labs/testcase:
-  #     name: Test Case
-  # labs/setup:
-  #     name: Setup    
   04-content-tester:
     name: Workshop Content Tester
-  05-templete-connect-cluster:
-    name: Connect Externel Cluster
-  06-workshop-manage:
-    name: Manage Workshop
-  07-workshop-deploy:
+  05-workshop-deployer:
     name: Deploy Workshop
-  99-summary:
+  99-workshop-summary:
     name: Workshop Summary
     exit_sign: Finish Workshop
 
