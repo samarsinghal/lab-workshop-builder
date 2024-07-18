@@ -11,17 +11,17 @@ spec:
     image: docker.io/samarsinghal/lab-workshop-builder:latest
     files:
     - git:
-        # url: https://github.com/samarsinghal/lab-workshop-builder
-        # ref: origin/main
-        image:
-          url: $(image_repository)/lab-workshop-builder-files:$(workshop_version)
+        url: https://github.com/samarsinghal/lab-workshop-builder
+        ref: origin/main
+    # - image:
+    #     url: $(image_repository)/lab-workshop-builder-files:$(workshop_version)
       includePaths:
       - /workshop/**
       - /project/**
       - /README.md
   session:
     namespaces:
-      budget: medium
+      budget: large
     applications:
       terminal:
         enabled: true

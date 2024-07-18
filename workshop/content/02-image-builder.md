@@ -11,6 +11,12 @@ In order to provide a robust and ready-to-use environment for the participants i
 
 2. **Choose base image:**
 
+    Base Image
+
+    ```execute-1
+    sed -i "s|^FROM .*|FROM ghcr.io/vmware-tanzu-labs/educates-base-environment:develop |" ~/exercises/$NEW_WORKSHOP_NAME/Dockerfile
+    ```
+
     JDK 8
 
     ```execute-1
@@ -47,6 +53,7 @@ In order to provide a robust and ready-to-use environment for the participants i
 
 4. **Open Image file for edit:** Update the docker file with all the requires tools on the workshop.
 
+
 5. **Build and push the image to image repository:**
 
     This workshop uses Kaniko to build the image and push it to the defined image registry.
@@ -69,4 +76,10 @@ In order to provide a robust and ready-to-use environment for the participants i
 
     ```execute-2
     exit
+    ```
+
+8. **Delete Test Image Pod:**
+
+    ``` execute-2
+    kubectl delete po $NEW_WORKSHOP_NAME
     ```

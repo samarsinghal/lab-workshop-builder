@@ -45,8 +45,11 @@ order_number=$(printf '%02d' $next_order)
 
 
 # Create the new file with the given details
-new_file_name="$order_number-$(echo "$content_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')"
+new_file_name="$order_number-$(echo "$content_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')"
 touch "$directory/$new_file_name.md"
+
+echo -e "---\ntitle: $content_title\n---" >> "$directory/$new_file_name.md"
+
 
 echo $new_file_name created
 

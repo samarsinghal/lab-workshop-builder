@@ -35,7 +35,18 @@ elif [ $REPO_STATUS -eq 404 ]; then
   create_repository
   educates new-workshop $NEW_WORKSHOP_NAME --template hugo --image $REGISTRY_URL/$REGISTRY_USERNAME/$NEW_WORKSHOP_NAME:$WORKSHOP_VERSION
   # mkdir $NEW_WORKSHOP_NAME
-  cd $NEW_WORKSHOP_NAME
+  cd ~/exercises/$NEW_WORKSHOP_NAME
+
+  # Use `sed` to perform the replacement
+  sed -i -e '/- image:/,/includePaths:/c\
+  \  - git:\
+  \      url: "'$REPO_NAME'/'$USERNAME'/'$NEW_WORKSHOP_NAME'"\
+  \      ref: origin/main\
+  \    includePaths:\
+  \    - /workshop/**\
+  \    - /exercises/**\
+  \    - /README.md' $HOME/exercises/$NEW_WORKSHOP_NAME/resources/workshop.yaml
+
   git init
   git config user.name "$USERNAME"
   git config user.email "$EMAIL"
