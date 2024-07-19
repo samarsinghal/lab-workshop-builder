@@ -10,9 +10,9 @@ Congratulations on completing the eduk8s workshop! You’ve gained valuable insi
 1. Custome image templates
 2. Educates Deployment 
 3. Realtime content update(If feasible)
-4. Portal/Workload artifacts builder
+4. Portal/Workshop artifacts builder
 5. Content Writer
-6. Content Instruction training
+6. Content Instruction training exercise
 7. Educates Advance Features
 
 ### Thank You for Participating!
